@@ -1,0 +1,10 @@
+/*@import 'normalize.css';*/
+
+.box2 {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  transition: all 0.5s;
+  user-select: none;
+  background-image: url('shared/assets/img/img.png');
+}
