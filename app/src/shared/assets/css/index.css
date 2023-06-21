@@ -1,19 +1,49 @@
 @import 'normalize.css';
 
-* {
-  font-family: sans-serif;
-}
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-dark: #0f172a;
+  --color-red: #dc2626;
+  --color-orange: #fb923c;
+  --color-yellow: #facc15;
+  --color-green: #84cc16;
+  --color-blue: #38bdf8;
+  --color-purple: #c084fc;
+  --color-gray: #94a3b8;
+  --color-gray-light: #cbd5e1;
 
-h1 {
-  /*color: green;*/
-  /*color: red;*/
-  font-size: 3rem;
-  /*background: red;*/
-  display: inline-block;
-}
+  --color-primary: var(--color-dark);
+  --color-secondary: var(--color-white);
+  --color-error: var(--color-red);
+  --color-success: var(--color-green);
+  --color-warning: var(--color-yellow);
+  --color-info: var(--color-blue);
 
-.container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  --screen-xs: 36em;
+  --screen-sm: 48em;
+  --screen-md: 62em;
+  --screen-lg: 75em;
+  --screen-xl: 88em;
+
+  --space-3xs: 0.25rem;   /* 4px */
+  --space-2xs: 0.5rem;    /* 8px */
+  --space-xs: 0.625rem;   /* 10px */
+  --space-sm: 0.75rem;    /* 12px */
+  --space-md: 1rem;       /* 16px */
+  --space-lg: 1.25rem;    /* 20px */
+  --space-xl: 1.5rem;     /* 24px */
+
+  --fz-xs: 0.75rem;
+  --fz-sm: 0.875rem;
+  --fz-md: 1rem;
+  --fz-lg: 1.125rem;
+  --fz-xl: 1.5rem;
+
+  --fz-h1: 2.125rem;
+  --fz-h2: 1.625rem;
+  --fz-h3: 1.375;
+  --fz-h4: 1.125rem;
+  --fz-h5: 1rem;
+  --fz-h6: 0.875rem;
 }
