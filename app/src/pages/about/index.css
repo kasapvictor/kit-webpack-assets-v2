@@ -11,7 +11,7 @@
   background-image: url('shared/assets/img/img.png');
   background-size: contain;
   border: 0.5rem solid red;
-  box-shadow: 40px 20px 40px -10px rgba(0,0,0,0.5);
+  box-shadow: 40px 20px 40px -10px rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
 }
 
