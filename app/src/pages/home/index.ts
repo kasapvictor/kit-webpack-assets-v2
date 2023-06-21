@@ -1,11 +1,14 @@
 import './index.css';
 
-const foo = (n: number) => {
-  const body = document.querySelector<HTMLBodyElement>('body');
+const generateAppDynamicContent = () => {
+  const el = document.getElementById('app') as HTMLDivElement;
 
-  if (body) {
-    body.append(`!!!${10 + n}!!!`);
+  if (!el) {
+    return false;
   }
+
+  const content = 'Hello World!';
+  el.innerHTML = `<p>${content}</p>`;
 };
 
-foo(2);
+generateAppDynamicContent();
