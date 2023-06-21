@@ -1,0 +1,65 @@
+@import 'shared/assets/css/index.css';
+
+#slider {
+  padding-top: var(--space-32);
+}
+
+#slider .swiper {
+  width: 61.25rem;
+  height: 26.25rem;
+}
+
+#slider .swiper-slide {
+  background: var(--color-gray-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#slider .swiper-pagination-bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  color: var(--color-info);
+  opacity: 1;
+  background: var(--color-gray);
+}
+
+#slider .swiper-pagination-bullet-active {
+  color: #fff;
+  background: var(--color-info);
+}
+
+#slider .swiper-button-next::after,
+#slider .swiper-button-prev::after {
+  font-size: var(--fz-xl);
+}
+
+#slider .error {
+  padding: var(--space-16) var(--space-24);
+  background-color: var(--color-error);
+  color: var(--color-white);
+  border-radius: var(--space-8);
+  font-weight: 100;
+}
+
+/* user */
+.user {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.user__avatar {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -5rem;
+  right: -2rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-info);
+}
