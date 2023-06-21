@@ -1,11 +1,16 @@
 import './index.css';
-import { log } from 'shared/lib/log';
+import { lalal } from 'shared/lib/lalal';
 
-// eslint-disable-next-line no-console
-log('About page scripts');
+const aboutInit = () => {
+  const body = document.querySelector<HTMLBodyElement>('body');
 
-const foo2 = () => {
-  return 3;
+  if (!body) {
+    return;
+  }
+
+  const sum = lalal(15);
+
+  body.append(`[|||][>>>]${sum}`);
 };
 
-foo2();
+aboutInit();

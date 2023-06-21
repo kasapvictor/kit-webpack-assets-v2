@@ -1,0 +1,8 @@
+.box2 {
+  width: 150px;
+  height: 150px;
+  display: grid;
+  transition: all 0.5s;
+  user-select: none;
+  background: linear-gradient(to bottom, orange, yellow);
+}

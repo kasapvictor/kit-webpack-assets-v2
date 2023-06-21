@@ -1,11 +1,10 @@
+include .env
+
 install:
 	npm ci || npm install
 
-rm-rf-dist:
-	rm -rf dist
-
 start:
-	NODE_ENV=development npx webpack serve
+	HOST=$(HOST) PORT=$(PORT_1) NODE_ENV=development npx webpack serve
 
 pretty:
 	npx prettier --write "src/**/*.{css,scss,js,ts}"
@@ -15,18 +14,15 @@ lint:
 
 pre-commit: pretty lint
 
-build-prod: rm-rf-dist
+build-prod:
 	NODE_ENV=production npx webpack --mode production
 
-build-prod-inject: rm-rf-dist
-	INJECT=true NODE_ENV=production npx webpack --mode production
-
-build-dev: rm-rf-dist
+build-dev:
 	NODE_ENV=development npx webpack --mode development
 
-watch: rm-rf-dist
+watch:
 	NODE_ENV=development npx webpack --watch
 
 # for browser-sync
 browser:
-	npx browser-sync --watch --no-notify --port 4000 --host 0.0.0.0 public
+	npx browser-sync --watch --no-notify --host $(HOST) --port $(PORT_2) dist

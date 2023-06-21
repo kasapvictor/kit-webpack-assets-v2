@@ -1,12 +1,11 @@
 @import 'shared/assets/css/index.css';
 
 .box1 {
-  width: 300px;
+  width: 100px;
   height: 200px;
   display: grid;
   transition: all 0.5s;
   user-select: none;
-  background: linear-gradient(to bottom, blue, orange);
-  /*background: red;*/
+  /*background: linear-gradient(to bottom, blue, orange);*/
   /*background: green;*/
 }
