@@ -43,8 +43,6 @@ export const apiRequest = async <D = Record<string, unknown>>({ debug = false, .
 
     if (axios.isAxiosError(err)) {
       const serverError = err.response?.data as ServerError;
-      // FIXME переделать на свои кода
-      //  return i18n.t(`error.${err.response.data.code}`);
       errorMessage =
         serverError?.code || serverError?.error || serverError?.message || err.response?.status || err.message;
     } else {
