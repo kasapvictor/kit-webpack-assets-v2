@@ -10,7 +10,7 @@ const aboutInit = () => {
 
   const sum = lalal(15);
 
-  body.append(`[|||][>>>]${sum}`);
+  body.append(`[---ololo---]${sum}`);
 };
 
 aboutInit();

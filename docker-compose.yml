@@ -21,3 +21,4 @@ services:
 
     volumes:
       - "./app:/home/app"
+      - "./.env:/home/app/.env"
