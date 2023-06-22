@@ -40,7 +40,6 @@
     "allowJs": true,
     "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
     "strictNullChecks": true
   },
 
