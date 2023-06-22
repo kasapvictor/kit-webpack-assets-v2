@@ -1,5 +1,4 @@
 import './index.css';
-import { lalal } from 'shared/lib/lalal';
 
 const aboutInit = () => {
   const body = document.querySelector<HTMLBodyElement>('body');
@@ -8,9 +7,7 @@ const aboutInit = () => {
     return;
   }
 
-  const sum = lalal(15);
-
-  body.append(`[---ololo---]${sum}`);
+  body.append(`10`);
 };
 
 aboutInit();
