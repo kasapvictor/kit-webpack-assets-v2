@@ -10,6 +10,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
 import { apiRequest } from 'shared/api';
 
+// region Types
 interface UserProps {
   age: number;
   email: string;
@@ -23,7 +24,9 @@ interface UserProps {
 interface DataProps {
   users: UserProps[];
 }
+// endregion
 
+// region View
 const initSlider = () => {
   new Swiper('.swiper', {
     loop: true,
@@ -66,7 +69,9 @@ const renderSlides = (wrapper: HTMLDivElement, data: DataProps) => {
 const renderError = (wrapper: HTMLDivElement, error: string) => {
   wrapper.innerHTML = `<p class="error">Something went wrong. ${error}<p>`;
 };
+// endregion
 
+// region Model
 const fetchingData = async (url: string) => {
   try {
     const result = await apiRequest({ url, method: 'get' });
@@ -76,27 +81,30 @@ const fetchingData = async (url: string) => {
     throw Error(err as string);
   }
 };
+// endregion
 
-export const slider = () => {
+// region Controller
+export const slider = async () => {
   const url = 'https://dummyjson.com/users';
   const wrapper = document.getElementById('slider') as HTMLDivElement;
+  const swiperWrapper = wrapper?.querySelector<HTMLDivElement>('.swiper-wrapper');
 
-  if (!wrapper) {
+  if (!wrapper || !swiperWrapper) {
+    // eslint-disable-next-line no-console
+    console.log('Slider error: Required DOM elements not found');
+
     return false;
   }
 
-  const swiperWrapper = wrapper.querySelector<HTMLDivElement>('.swiper-wrapper');
-
-  if (!swiperWrapper) {
-    renderError(wrapper, 'No swiper wrapper');
-
-    return;
+  try {
+    const data = await fetchingData(url);
+    renderSlides(swiperWrapper, data);
+    initSlider();
+  } catch (error) {
+    renderError(wrapper, error as string);
   }
-
-  fetchingData(url)
-    .then((data) => renderSlides(swiperWrapper, data))
-    .then(initSlider)
-    .catch((error) => renderError(wrapper, error));
 };
+// endregion
 
+// initial Slider
 slider();
