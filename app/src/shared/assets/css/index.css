@@ -1,16 +1,100 @@
 :root {
+  /* COLORS */
+  --color-yellow-50: #fffceb;
+  --color-yellow-100: #fef5c7;
+  --color-yellow-200: #feea89;
+  --color-yellow-300: #fdd94c;
+  --color-yellow-400: #fcc419;
+  --color-yellow-500: #f6a60a;
+  --color-yellow-600: #da7e05;
+  --color-yellow-700: #b55908;
+  --color-yellow-800: #93440d;
+  --color-yellow-900: #79380e;
+  --color-yellow-950: #451c03;
+
+  --color-orange-50: #fff5ed;
+  --color-orange-100: #ffe8d5;
+  --color-orange-200: #fed0aa;
+  --color-orange-300: #fdb274;
+  --color-orange-400: #fb923c;
+  --color-orange-500: #f97c16;
+  --color-orange-600: #ea700c;
+  --color-orange-700: #c25e0c;
+  --color-orange-800: #9a4f12;
+  --color-orange-900: #7c4212;
+  --color-orange-950: #432207;
+
+  --color-red-50: #fff0f0;
+  --color-red-100: #ffddde;
+  --color-red-200: #ffc0c2;
+  --color-red-300: #ff9497;
+  --color-red-400: #ff575b;
+  --color-red-500: #ff2329;
+  --color-red-600: #ed0006;
+  --color-red-700: #d70005;
+  --color-red-800: #b10307;
+  --color-red-900: #920a0d;
+  --color-red-950: #500002;
+
+  --color-green-50: #ecfdf3;
+  --color-green-100: #d1fadf;
+  --color-green-200: #a8f2c6;
+  --color-green-300: #6fe6a7;
+  --color-green-400: #36d183;
+  --color-green-500: #12b76a;
+  --color-green-600: #079455;
+  --color-green-700: #057747;
+  --color-green-800: #075e3a;
+  --color-green-900: #074d32;
+  --color-green-950: #022c1c;
+
+  --color-blue-50: #f1f7fe;
+  --color-blue-100: #e2eefc;
+  --color-blue-200: #bddcfa;
+  --color-blue-300: #83bff6;
+  --color-blue-400: #429fee;
+  --color-blue-500: #228be6;
+  --color-blue-600: #0c66bd;
+  --color-blue-700: #0b5199;
+  --color-blue-800: #0d457f;
+  --color-blue-900: #113b69;
+  --color-blue-950: #0b2546;
+
+  --color-gray-50: #f6f7f8;
+  --color-gray-100: #ebecee;
+  --color-gray-200: #dbdee2;
+  --color-gray-300: #c3c8cd;
+  --color-gray-400: #9da4ae;
+  --color-gray-500: #8f95a2;
+  --color-gray-600: #7e8392;
+  --color-gray-700: #717584;
+  --color-gray-800: #5f626e;
+  --color-gray-900: #4f5159;
+  --color-gray-950: #323439;
+
+  --color-dark-50: #f6f6f7;
+  --color-dark-100: #e1e4e6;
+  --color-dark-200: #c3c8cc;
+  --color-dark-300: #9da3ab;
+  --color-dark-400: #787f89;
+  --color-dark-500: #5e646e;
+  --color-dark-600: #4a4f57;
+  --color-dark-700: #3d4148;
+  --color-dark-800: #34363b;
+  --color-dark-900: #2e3033;
+  --color-dark-950: #101113;
+
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-dark: #0f172a;
-  --color-light: #fefefe;
-  --color-red: #dc2626;
-  --color-orange: #fb923c;
-  --color-yellow: #facc15;
-  --color-green: #84cc16;
-  --color-blue: #38bdf8;
-  --color-purple: #c084fc;
-  --color-gray: #94a3b8;
-  --color-gray-light: #cbd5e1;
+  --color-dark: var(--color-dark-900);
+  --color-light: var(--color-gray-50);
+  --color-red: var(--color-red-500);
+  --color-orange: var(--color-orange-500);
+  --color-yellow: var(--color-yellow-500);
+  --color-green: var(--color-green-500);
+  --color-blue: var(--color-blue-500);
+  --color-gray: var(--color-gray-500);
+  --color-gray-light: var(--color-gray-200);
 
   --color-primary: var(--color-dark);
   --color-secondary: var(--color-white);
@@ -25,15 +109,60 @@
   --screen-lg: 75em;
   --screen-xl: 88em;
 
-  --space-4: 0.25rem; /* 4px */
-  --space-8: 0.5rem; /* 8px */
-  --space-10: 0.625rem; /* 10px */
-  --space-12: 0.75rem; /* 12px */
-  --space-16: 1rem; /* 16px */
-  --space-20: 1.25rem; /* 20px */
-  --space-24: 1.5rem; /* 24px */
-  --space-32: 2rem; /* 32px */
+  --space-2: 0.125rem;
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  --space-24: 1.5rem;
+  --space-28: 1.75rem;
+  --space-32: 2rem;
+  --space-36: 2.25rem;
+  --space-40: 2.5rem;
+  --space-44: 2.75rem;
+  --space-48: 3rem;
+  --space-52: 3.25rem;
+  --space-56: 3.5rem;
+  --space-60: 3.75rem;
+  --space-64: 4rem;
+  --space-72: 4.5rem;
+  --space-80: 5rem;
+  --space-96: 6rem;
+  --space-128: 8rem;
   /* ...etc */
+
+  --size-2: 0.125rem;
+  --size-4: 0.25rem;
+  --size-8: 0.5rem;
+  --size-12: 0.75rem;
+  --size-16: 1rem;
+  --size-20: 1.25rem;
+  --size-24: 1.5rem;
+  --size-28: 1.75rem;
+  --size-32: 2rem;
+  --size-36: 2.25rem;
+  --size-40: 2.5rem;
+  --size-44: 2.75rem;
+  --size-48: 3rem;
+  --size-52: 3.25rem;
+  --size-56: 3.5rem;
+  --size-60: 3.75rem;
+  --size-64: 4rem;
+  --size-72: 4.5rem;
+  --size-80: 5rem;
+  --size-96: 6rem;
+  --size-128: 8rem;
+  /* ...etc */
+
+  --opacity-0: 0;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-40: 0.4;
+  --opacity-60: 0.6;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-100: 1;
 
   --fz-xs: 0.75rem;
   --fz-sm: 0.875rem;
